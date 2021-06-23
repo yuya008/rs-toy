@@ -11,7 +11,7 @@ pub fn run(opt: &Opt) -> Result<(), ServerError> {
     logger::setup_logger()?;
     let db_pool = db::new(opt)?;
 
-    Ok(rt::System::new("toy").block_on(
+    Ok(rt::System::new("rs-toy").block_on(
         HttpServer::new(move || {
             App::new()
                 .data(db_pool.clone())
