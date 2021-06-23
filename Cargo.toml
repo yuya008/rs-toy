@@ -1,0 +1,14 @@
+[package]
+name = "rs-toy"
+version = "0.1.0"
+authors = ["余亚 <yuya008@aliyun.com>"]
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0"
+thiserror = "1.0"
+structopt = "0.3"
+diesel = { version = "1.4", features = ["mysql","r2d2"] }
+log = "0.4"
+env_logger = "0.8"
+actix-web = "3"
